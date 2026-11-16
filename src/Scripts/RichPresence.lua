@@ -16,11 +16,13 @@ local function activityForLocation(key)
 		details = location.Details,
 		large_image = location.LargeImage,
 		large_text = "Hades II",
+		start_timestamp = mod.PresenceStartTime,
 	}
 end
 
 function mod.InitializePresence()
 	mod.PresenceContext = {}
+	mod.PresenceStartTime = nil
 	mod.AssignPresenceProperties()
 	rom.discord.start(applicationId, activityForLocation("MainMenu"))
 end
@@ -96,7 +98,13 @@ function mod.ObservePresenceRoom(currentRun, currentRoom, hub, restored)
 	local region     = currentRoom.RoomSetName
 	local encounter  = not hub and currentRoom.Encounter
 
+	if mod.PresenceContext.Hub ~= hub or not hub and mod.PresenceContext.Run ~= currentRun then
+		mod.PresenceStartTime = os.time()
+	end
+
 	local context    = {
+		Hub = hub,
+		Run = not hub and currentRun or nil,
 		Room = currentRoom.Name,
 		Region = region,
 		RoomPresence = not hub and presenceProperty(definition, currentRoom.Name) or nil,
