@@ -20,3 +20,7 @@ If you are using [Dream Dive Tweaks](https://thunderstore.io/c/hades-ii/p/zerp/D
 
 Does your mod add new encounter types or locations that you would like to show as a custom Rich Presence status?
 Create a PR that adds the new status, and reach out to @NikkelM on the [community Discord](https://discordapp.com/invite/KuMbyrN) to have the image/screenshot added to the Discord App.
+
+## AI Disclaimer
+
+Some parts of this mod were assisted by Generative AI, especially research into required engine hooks and implementation details for Discord Rich Presence integration.
