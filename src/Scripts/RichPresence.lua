@@ -86,10 +86,6 @@ function mod.PublishPresence(token)
 	mod.SubmitPresenceLocation(location)
 end
 
----@param currentRun table|nil
----@param currentRoom table
----@param hub boolean
----@param restored? boolean
 function mod.ObservePresenceRoom(currentRun, currentRoom, hub, restored)
 	currentRun       = currentRun or {}
 
