@@ -41,6 +41,8 @@ function mod.SubmitPresenceLocation(key)
 			activity.state = activity.state ..
 					" (Region " .. context.DreamRegion .. " of " .. game.GameData.FullRunBiomeCount .. ")"
 		end
+	elseif mod.PresenceLocations[key].Journey then
+		activity.state = "In a Zagreus' Journey run"
 	end
 
 	rom.discord.set_activity(activity)
