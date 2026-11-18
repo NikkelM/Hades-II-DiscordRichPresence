@@ -91,7 +91,7 @@ local function assignProperties(data, properties, tableName)
 	for name, location in pairs(properties) do
 		local definition = data[name]
 		if not definition then
-			rom.log.warning("Missing Discord presence definition: " .. tableName .. "." .. name)
+			rom.log.warning("[Discord] Missing Discord presence definition: " .. tableName .. "." .. name)
 		else
 			definition.DiscordRichPresence = location
 		end
