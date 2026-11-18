@@ -130,11 +130,3 @@ function mod.ObservePresenceRoom(currentRun, currentRoom, hub, restored)
 	mod.PublishPresence(token)
 end
 
-function mod.RefreshPresence()
-	local currentRun = game.CurrentRun
-	if game.CurrentHubRoom then
-		mod.ObservePresenceRoom(nil, game.CurrentHubRoom, true)
-	elseif currentRun and currentRun.CurrentRoom then
-		mod.ObservePresenceRoom(currentRun, currentRun.CurrentRoom, false, true)
-	end
-end

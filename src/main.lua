@@ -44,9 +44,6 @@ end
 
 local function on_reload()
 	if config.enabled == false then return end
-
-	mod.InitializePresence()
-	mod.RefreshPresence()
 end
 
 local function on_ready_late()
