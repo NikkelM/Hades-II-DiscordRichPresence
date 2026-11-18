@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "NikkelM"
 name = "Discord_Rich_Presence"
-versionNumber = "1.0.0"
+versionNumber = "1.0.1"
 description = "Adds detailed Discord Rich Presence status messages and icons for Hades II, with compatibility for Dream Dives, Chaos Trials, and the Zagreus' Journey and Dream Dive Tweaks mods."
 websiteUrl = "https://github.com/NikkelM/Hades-II-DiscordRichPresence"
 containsNsfwContent = false
